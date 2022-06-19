@@ -35,8 +35,8 @@ if [ -z "$volume_name" ]; then
   volume_name=$volume
 fi
 
-volume_exists=$(docker volume ls --filter name=$volume_name | grep -q $volume_name)
-if [ volume_exists ]; then
+volume_exists=$(docker volume ls | grep -q $volume_name)
+if [ $volume_exists ]; then
   printf "***********************************\n"
   printf "Error: volume $volume_name exists. \n"
   printf "Please delete before proceeding    \n"

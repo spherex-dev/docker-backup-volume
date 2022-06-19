@@ -20,6 +20,17 @@ Optionally if you wish to create a volume with a different name from the backup 
 
     create-volume-from-backup.sh -v <volume_name> -p <prefix> -n <new_volume_name>
 
+## Execution Example
+
+The animation below illustrates how the docker volume `owncloud-docker_files` is saved to `/tmp/backups/owncloud-docker_files`. The volume is saved as a zipped tar file with the date and time it was saved.
+
+![](./images/create-volume-backup.gif)
+
+The following animation shows how the docker volume is restored from `/tmp/backups` by specifying the snapshot file to restore fom. Note: If you wish to restore the docker volume with a different name than the backup, this can be done by adding a `-n` flag to the command and specifying the new volume name.
+
+![](./images/restore-docker-volume.gif)
+
+
 ### Created by www.spherex.dev
 
 We hope this code is useful for you.
